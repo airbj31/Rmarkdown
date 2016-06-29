@@ -1,8 +1,16 @@
 ---
 title: "An Example R Markdown (edited)"
 author: "James H. Steiger, [Byungju Kim](http://about.me/byungju.kim)"
-date: "Monday, September 28, 2015"
-output: html_document
+date: "Wednesdat, June 29, 2016"
+output: 
+  html_document: 
+    code: hide
+    highlight: textmate
+    toc: yes
+    toc-level: 1
+    toc_float:
+      collapsed: TRUE
+      smooth_scroll: yes
 ---
 
 ```{r}
