@@ -5,9 +5,18 @@ date: "Monday, September 28, 2015"
 output: html_document
 ---
 
+```{r}
+  require(htmlTable)
+  require(dplyr)
+  require(tidyr)
+```
+
+
 # Introduction
 
 This is an R Markdown document. By studying the document source code file, compiling it, and observing the result, side-by-side with the source, you'll learn a lot about the R Markdown and LaTeX mathematical typesetting language, and you'll be able to produce nice-looking documents with R input and output neatly formatted.
+
+this file is originally written bt *James H. Steiger* and shamelessly modified by *Byungju Kim* for the purpose of self-study.
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -281,10 +290,32 @@ $$\sum_{i=1}^{n}\left( \frac{X_i}{Y_i} \right)$$
 Many statistical expressions use Greek letters. Much of the Greek alphabet is implemented in LaTeX, as indicated in the LaTeX cheat sheet available at the course website.  There are both upper and lower case versions available for some letters.
 
 ```
-$$\alpha, \beta,  \gamma, \Gamma$$
-```
+$$\alpha, \beta, \gamma, \Gamma$$
+``` 
 
-$$\alpha, \beta,  \gamma, \Gamma$$
+$$\alpha, \beta, \gamma, \Gamma$$
+
+Here are more greek letters table for the latex.
+
+```{r greekletter, echo=FALSE}
+  
+  namevector<-c("alpha","beta","gamma",
+                "delta","epsilon","zeta",
+                "eta","theta","iota",
+                "kappa","lambda","mu",
+                "nu","xi","omicron",
+                "pi","rho","sigma",
+                "tau","upsilon","phi",
+                "chi","psi","omega")
+  LatexLower<- paste("$\\",namevector,"$",sep="")
+  syntax<- paste("\\\\",namevector,sep="")
+
+  greektable<-data.frame(namevector,LatexLower,syntax)
+  
+  htmlTable(greektable)
+
+  
+```
 
 ### Special Symbols
 
